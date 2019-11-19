@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
 
 function styles() {
 
@@ -38,17 +39,37 @@ function watch(){
     gulp.watch("css/*.scss", styles);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch(["js/*.js", "!js/*min.js"], js);
+    gulp.watch("img/original/*", imgSquash())
     
     browserSync.init({
         server: {
             baseDir: './'
         }
     });
-    
-    
 }
 
 const build = gulp.parallel(styles, js);
+
+// Gulp imagemin //
+function imgSquash() {
+    return gulp
+        .src('./img/original/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false},
+                    {verbose: true}
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('img/compressed'));
+}
+
+gulp.task("imgSquash", imgSquash);
 
 
 exports.styles = styles;
