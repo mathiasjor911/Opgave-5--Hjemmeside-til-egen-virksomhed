@@ -38,7 +38,7 @@ function watch(){
     gulp.watch("css/*.scss", styles);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch(["js/*.js", "!js/*min.js"], js);
-    
+
     browserSync.init({
         server: {
             baseDir: './'
@@ -74,6 +74,3 @@ exports.styles = styles;
 exports.js = js;
 exports.watch = watch;
 exports.build = build;
-
-
-

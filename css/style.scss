@@ -3,3 +3,34 @@
 body{
     background: $off-white;
 }
+
+
+
+
+// Om os css //
+.sectionomos{
+    .wrapper{
+        h1{
+            text-align: center;
+        }
+    }
+}
+
+.kerneverdier{
+    background: $navy;
+
+    h1,h2,h3,p{
+        margin: 0;
+    }
+
+    .wrapper{
+        color: $off-white;
+        .kerneverdicontainer{
+            svg{
+                color: $orange;
+                width: 40px;
+                height: auto;
+            }
+        }
+    }
+}

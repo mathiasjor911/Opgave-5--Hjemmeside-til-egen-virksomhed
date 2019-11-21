@@ -1,2 +1,20 @@
+/* Farver */
+/* Utility */
+body {
+  background: #f5f5f5; }
+
+.sectionomos .wrapper h1 {
+  text-align: center; }
+
+.kerneverdier {
+  background: #1f1f29; }
+  .kerneverdier h1, .kerneverdier h2, .kerneverdier h3, .kerneverdier p {
+    margin: 0; }
+  .kerneverdier .wrapper {
+    color: #f5f5f5; }
+    .kerneverdier .wrapper .kerneverdicontainer svg {
+      color: #ff7f50;
+      width: 40px;
+      height: auto; }
 
 /*# sourceMappingURL=style.css.map */
