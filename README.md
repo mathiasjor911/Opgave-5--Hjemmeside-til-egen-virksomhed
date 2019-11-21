@@ -8,7 +8,7 @@ I bestemmer selv hvad virksomheden skal omhandle, men det skal være en reel vir
 
 Siden skal laves helt færdig så der er alle de ting på der er nødvendige for at virksomheden ville kunne startes op.
 
-**Vores Valg**
+### Vores Valg
 Vi har valgt at lave vores eget webbureau, som vi har kaldt massweb. Navnet er lavet ud fra vores navnes forbogstaver, efterfulgt af 'web'.
 
 Vi har valgt at lave en simpel og stilren hjemmeside, med en enkel farvepalette bestående af; orange, mørkeblå, støvet hvid og hvid.
