@@ -80,7 +80,7 @@ a{
 .intro-content{
     padding: 6em 0 8em;
     max-width: 600px;
-    
+
     h1{
         font-size: 56px;
     }
@@ -102,7 +102,7 @@ a{
         @media screen and (max-width: 992px) {
             grid-template-columns: 1fr;
         }
-        
+
         div{
             flex-direction: column;
             text-align: center;
@@ -120,7 +120,7 @@ a{
             }
         }
     }
-    
+
 
     svg{
         width: 70px;
@@ -130,30 +130,145 @@ a{
 
 
 
-// Om os css //
-.sectionomos{
-  .wrapper{
-    h1{
-      text-align: center;
-    }
-  }
+h1,h2,h3 {
+    font-family: $inter-font;
+    margin-bottom: -0.3em;
 }
 
-.kerneverdier{
-  background: $navy;
+p {
+    font-family: $roboto-font;
+    font-weight: 300;
+    line-height: 1.6;
+}
 
-  h1,h2,h3,p{
-    margin: 0;
-  }
 
-  .wrapper{
-    color: $off-white;
-    .kerneverdicontainer{
-      svg{
-        color: $orange;
-        width: 40px;
-        height: auto;
+/* Ydelser */
+.webudvikling {
+    .wrapper {
+        .segment {
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .webudvikling, .markedsføring {
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 25px;
+
+            .segment {
+                grid-column: (1);
+            }
+
+            .segment:nth-of-type(2) {
+                grid-column: (2);
+            }
+
+            .segment:nth-of-type(3) {
+                grid-column: (3);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* Abdullah CSS */
+
+// Om os css //
+.sectionomos{
+    .wrapper{
+      h1{
+        text-align: center;
       }
     }
   }
+  
+  .kerneverdier{
+    background: $navy;
+  
+    h1,h2,h3,p{
+      margin: 0;
+    }
+  
+    .wrapper{
+      color: $off-white;
+      .kerneverdicontainer{
+        svg{
+          color: $orange;
+          width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+
+  /* Sara Side */
+  /* Team side */
+
+.team {
+    h2 {
+        font-family: $inter-font, $roboto-font;
+        color: $navy;
+
+        mark {
+            color: $orange;
+            background: transparent;
+        }
+    }
+
+    .teamprofiles {
+        .profil {
+            .textprofil {
+                position: absolute;
+                padding-left: 15px;
+                padding-top: 218px;
+                z-index: 1;
+
+                h1 {
+                    font-family: $inter-font;
+                    font-size: 1.5rem;
+                    color: $white;
+                    margin: 0;
+                }
+
+                p {
+                    font-family: $inter-font;
+                    color: $white;
+                }
+            }
+
+            .gradientimg {
+                width: 312px;
+                height: 318px;
+                position: absolute;
+                background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(275, 10, 0, 0), rgba(255, 10, 0, 0), #2c2626c9);
+                /*
+                background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+                */
+            }
+
+        }
+    }
+
+    .praktik {
+        background: $white;
+        width: 100%;
+
+        p {
+            mark {
+                color: $orange;
+                background: transparent;
+            }
+        }
+    }
 }
