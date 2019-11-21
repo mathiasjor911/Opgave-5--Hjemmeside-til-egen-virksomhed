@@ -132,7 +132,8 @@ a{
 
 h1,h2,h3 {
     font-family: $inter-font;
-    margin-bottom: -0.3em;
+    margin-bottom: 0;
+    font-weight: 900;
 }
 
 p {
@@ -211,10 +212,6 @@ p {
     }
   }
 
-
-  /* Sara Side */
-  /* Team side */
-
 .team {
     h2 {
         font-family: $inter-font, $roboto-font;
@@ -226,7 +223,9 @@ p {
         }
     }
 
-    .teamprofiles {
+
+     margin-bottom: -0.3em;
+   .teamprofiles {
         .profil {
             .textprofil {
                 position: absolute;
