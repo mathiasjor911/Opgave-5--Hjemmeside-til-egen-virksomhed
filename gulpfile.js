@@ -39,7 +39,6 @@ function watch(){
     gulp.watch("css/*.scss", styles);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch(["js/*.js", "!js/*min.js"], js);
-    gulp.watch("img/original/*", imgSquash())
     
     browserSync.init({
         server: {
