@@ -4,11 +4,10 @@ const browserSync = require("browser-sync");
 const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
-const critical = require ("critical");
+
 
 function styles() {
     return(
@@ -16,7 +15,7 @@ function styles() {
             .pipe(sourcemaps.init())
             .pipe(sass())
             .pipe(postcss([autoprefixer({grid:true})]))
-            .stream         .pipe(sourcemaps.write("."))
+            .pipe(sourcemaps.write("."))
             .pipe(gulp.dest("css"))
             .pipe(browserSync.stream())
     );
@@ -70,23 +69,6 @@ function imgSquash() {
 
 gulp.task("imgSquash", imgSquash);
 
-
-// Gulp Critical //
-gulp.task('critical', () => {
-    return gulp
-        .src('*.html')
-        .pipe(critical({
-            base: 'dist/',
-            inline: true,
-            css: [
-                'css/*.scss'
-            ]
-        }))
-        .on('error', err => {
-            log.error(err.message);
-        })
-        .pipe(gulp.dest('dist/'));
-});
 
 exports.styles = styles;
 exports.js = js;
