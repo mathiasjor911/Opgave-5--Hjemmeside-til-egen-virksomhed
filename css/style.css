@@ -1,2 +1,37 @@
+@charset "UTF-8";
+/* Farver */
+/* Utility */
+body {
+  background: #f5f5f5; }
+
+h1, h2, h3 {
+  font-family: "Inter UI", sans-serif;
+  margin-bottom: -0.3em; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.6; }
+
+/* Ydelser */
+.webudvikling .wrapper .segment p {
+  margin-bottom: 40px; }
+
+@media screen and (min-width: 992px) {
+  .webudvikling .wrapper, .markedsføring .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px; }
+    .webudvikling .wrapper .segment, .markedsføring .wrapper .segment {
+      -ms-grid-column: 1;
+      grid-column: 1; }
+    .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2) {
+      -ms-grid-column: 2;
+      grid-column: 2; }
+    .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3) {
+      -ms-grid-column: 3;
+      grid-column: 3; } }
 
 /*# sourceMappingURL=style.css.map */
