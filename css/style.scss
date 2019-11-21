@@ -3,128 +3,34 @@
 body{
     background: $off-white;
 }
-a{
-    text-decoration: none;
-    color: $off-white;
-}
-.wrapper{
-    max-width: 1400px;
-    padding: 1rem 2rem;
-    margin: 0 auto;
-}
-.highlight{
-    color: $orange;
-}
-/* Navbar / Intro Section */
-.navbar{
-    font-family: $inter-font;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 0;
 
-    .logo{
-        font-family: $inter-font;
-        font-weight: 900;
-        font-size: 24px;
-    }
 
-    .nav-menu{
-        cursor: pointer;
-        display: none;
 
-        @media screen and (max-width: 992px){
-            display: flex;
-        }
-    }
 
-    .nav-links{
-        list-style: none;
-        display: flex;
-
-        @media screen and (max-width: 992px){
-            display: none;
-        }
-
-        li{
-            padding: 0;
-            margin: 0 1em;
-        }
-        .nav-link{
-            color: $off-white;
-            font-family: $roboto-font;
-            font-weight: 300;
-            font-size: 13px;
-            text-transform: uppercase;
-            opacity: 0.7;
-            transition: 200ms ease-in-out;
-
-            &:hover{
-                opacity: 1;
-            }
-        }
-        .active{
-            font-weight: 400;
-            opacity: 1;
+// Om os css //
+.sectionomos{
+    .wrapper{
+        h1{
+            text-align: center;
         }
     }
 }
 
-.intro-section, .subheader{
-    background: linear-gradient(to bottom, rgba($navy, 0.9), rgba($navy, 0.9)), url('../img/bg-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
-    color: $off-white;
-}
-.intro-content{
-    padding: 6em 0 8em;
-    max-width: 600px;
-    
-    h1{
-        font-size: 56px;
-    }
-    p{
-        line-height: 1.4;
-        font-size: 18px;
-    }
+.kerneverdier{
+    background: $navy;
 
-}
-/* Feature section */
-.front-features{
-    padding: 4em 0;
-    background: $white;
+    h1,h2,h3,p{
+        margin: 0;
+    }
 
     .wrapper{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
-        @media screen and (max-width: 992px) {
-            grid-template-columns: 1fr;
-        }
-        
-        div{
-            flex-direction: column;
-            text-align: center;
-
-            .feature-overskrift{
-                text-transform: uppercase;
-                font-family: $inter-font;
-                font-weight: 900;
-                font-size: 16px;
-            }
-            .feature-lead{
-                font-size: 16px;
-                font-weight: 300;
-                padding: 0 1.5em;
+        color: $off-white;
+        .kerneverdicontainer{
+            svg{
+                color: $orange;
+                width: 40px;
+                height: auto;
             }
         }
-    }
-    
-
-    svg{
-        width: 70px;
-        height: auto;
     }
 }
-
