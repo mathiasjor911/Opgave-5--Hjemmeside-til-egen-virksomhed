@@ -65,7 +65,7 @@ function imgSquash() {
                 ]
             })
         ]))
-        .pipe(gulp.dest('img/compressed'));
+        .pipe(gulp.dest('img/'));
 }
 
 gulp.task("imgSquash", imgSquash);
