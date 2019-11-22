@@ -61,7 +61,7 @@ svg {
       font-weight: 400;
       opacity: 1; }
   .navbar .dropdown-menu {
-    display: block;
+    display: none;
     position: absolute; }
     .navbar .dropdown-menu .dropdown-content {
       display: flex;
