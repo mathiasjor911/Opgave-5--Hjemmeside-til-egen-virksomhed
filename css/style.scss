@@ -191,9 +191,9 @@ p {
         text-align: center;
       }
     }
-  }
+}
   
-  .kerneverdier{
+.kerneverdier{
     background: $navy;
   
     h1,h2,h3,p{
@@ -220,7 +220,25 @@ p {
         }
       }
     }
-  }
+}
+
+.offerbg{
+    background: $off-white;
+
+    .orangeline{
+        background-color: $orange;
+        width: 80px;
+        height: 4px;
+        margin: 30px 0 20px;
+    }
+
+    .wrapper{
+        h2{
+            margin: 0 0 5px;
+            font-size: 2em;
+        }
+    }
+}
 
 
 
