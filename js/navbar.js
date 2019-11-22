@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $(".dropdown").hover(function(){
-      $(".dropdown-menu", this).slideDown(100);
-    }, function(){
-      $(".dropdown-menu", this).stop().slideUp(100);
+    $(".dropdown").mouseover(function(){
+        $('.dropdown-menu').slideDown(100);
+    });
+    $(".dropdown , .dropdown-menu").mouseleave(function(){
+        $('dropdown-menu').slideUp(100);
     });
   });
