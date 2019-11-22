@@ -15,6 +15,11 @@ a{
 .highlight{
     color: $orange;
 }
+
+svg{
+    color: $orange;
+    stroke-width: 1;
+}
 /* Navbar / Intro Section */
 .navbar{
     font-family: $inter-font;
@@ -69,6 +74,36 @@ a{
             opacity: 1;
         }
     }
+    .dropdown-menu{
+        display: block;
+        position: absolute;
+
+
+        .dropdown-content{
+            display: flex;
+            flex-direction: column;
+            padding: 1em 0;
+
+            .dropdown-link{
+                color: rgba($color: $off-white, $alpha: 0.7);
+                font-size: 13px;
+                display: block;
+                border-left: 1px solid rgba($color: $off-white, $alpha: 0.5);
+                padding: 0.6em 1em;
+                transition: 200ms ease-in-out;
+
+                &:hover{
+                    color: $off-white;
+                    border-color: $off-white;
+                }
+
+            }
+        }
+
+        
+    }
+
+
 }
 
 .intro-section, .subheader{

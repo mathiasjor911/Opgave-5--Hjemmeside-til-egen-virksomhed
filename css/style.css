@@ -16,6 +16,10 @@ a {
 .highlight {
   color: #ff7f50; }
 
+svg {
+  color: #ff7f50;
+  stroke-width: 1; }
+
 /* Navbar / Intro Section */
 .navbar {
   font-family: "Inter UI", sans-serif;
@@ -56,6 +60,23 @@ a {
     .navbar .nav-links .active {
       font-weight: 400;
       opacity: 1; }
+  .navbar .dropdown-menu {
+    display: block;
+    position: absolute; }
+    .navbar .dropdown-menu .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      padding: 1em 0; }
+      .navbar .dropdown-menu .dropdown-content .dropdown-link {
+        color: rgba(245, 245, 245, 0.7);
+        font-size: 13px;
+        display: block;
+        border-left: 1px solid rgba(245, 245, 245, 0.5);
+        padding: 0.6em 1em;
+        transition: 200ms ease-in-out; }
+        .navbar .dropdown-menu .dropdown-content .dropdown-link:hover {
+          color: #f5f5f5;
+          border-color: #f5f5f5; }
 
 .intro-section, .subheader {
   background: linear-gradient(to bottom, rgba(31, 31, 41, 0.9), rgba(31, 31, 41, 0.9)), url("../img/bg-pattern.jpg");
