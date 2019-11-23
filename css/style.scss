@@ -222,8 +222,11 @@ p {
 // Om os css //
 .sectionomos{
     .wrapper{
+        max-width: 800px;
+
       h1{
-        text-align: center;
+          text-align: center;
+          margin-bottom: 40px;
       }
     }
 }
