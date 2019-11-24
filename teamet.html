@@ -5,23 +5,33 @@
 
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
+    <title>Opgave 5</title>
 
-    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
-    <meta charset="utf-8">
-
-    <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
-
-    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
-
-    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- OG Meta Tags-->
+    <meta property="og:title" content="titel" />
+    <meta property="og:url" content="">
+    <meta property=" og:image" content="">
+    <meta property=" og:description" content="Beskrivelse" />
+    <meta property="og:locale" content="da_DK" />
+
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Eget stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Google Fonts og Inter UI-->
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,56 +40,62 @@ denne side skal sættes op i grid med 4 rows-->
 <body>
 
 <section class="team">
-    <h2>MØD TEAMET HOS <mark>MASSWEB</mark></h2>
-    <div class="teamprofiles">
+    <div class="wrapper">
+        <h1>MØD TEAMET HOS <span class="highlight">MASSWEB</span></h1>
+        <div class="teamprofiles">
+            <div class="profil">
+                <div class="textprofil">
+                    <h1>ABDULLAH</h1>
+                    <p>UDVIKLER</p>
+                </div>
+                <div class="gradientimg"></div>
+                <img src="img/Group%206.jpg" alt="profil">
 
-        <div class="profil">
-            <div class="textprofil">
-                <h1>ABDULLAH</h1>
-                <p>UDVIKLER</p>
             </div>
-            <div class="gradientimg"></div>
-            <img src="img/Group%206.jpg" alt="profil">
+            <div class="profil">
+                <div class="textprofil">
+                    <h1>MATHIAS</h1>
+                    <p>UDVIKLER</p>
+                </div>
+                <div class="gradientimg"></div>
+                <img src="img/Group%206.jpg" alt="profil">
 
-        </div>
-        <div class="profil">
-            <div class="textprofil">
-                <h1>MATHIAS</h1>
-                <p>UDVIKLER</p>
             </div>
-            <div class="gradientimg"></div>
-            <img src="img/Group%206.jpg" alt="profil">
+            <div class="profil">
+                <div class="textprofil">
+                    <h1>SARA</h1>
+                    <p>GRAFISK DESIGNER</p>
+                </div>
+                <div class="gradientimg"></div>
+                <img src="img/Group%206.jpg" alt="profil">
 
-        </div>
-        <div class="profil">
-            <div class="textprofil">
-                <h1>SARA</h1>
-                <p>GRAFISK DESIGNER</p>
             </div>
-            <div class="gradientimg"></div>
-            <img src="img/Group%206.jpg" alt="profil">
-
-        </div>
-        <div class="profil">
-            <div class="textprofil">
-                <h1>STEPHANIE</h1>
-                <p>MARKEDSFØRING</p>
+            <div class="profil">
+                <div class="textprofil">
+                    <h1>STEPHANIE</h1>
+                    <p>MARKEDSFØRING</p>
+                </div>
+                <div class="gradientimg"></div>
+                <img src="img/Group%206.jpg" alt="profil">
             </div>
-            <div class="gradientimg"></div>
-            <img src="img/Group%206.jpg" alt="profil">
         </div>
-
     </div>
-    <div class="praktik">
-        <h2>VI SØGER PRAKTIKANT</h2>
-        <p>vi hos MASSWEB, er altid frisk på at
 
-        </p>
-        <br>
+</section>
+<section class="praktik">
+    <div class="wrapper">
+        <div class="ompraktik">
+            <h2> EN VIRKSOMHED I <span class="highlight">UDVIKLING</span></h2>
+            <h3>VI SØGER PRAKTIKANT</h3>
+            <p>vi hos MASSWEB, er altid frisk på at
 
-        <P> Kunne du tænke dig at være en del af teamet?</P>
-        <br>
-        <p>Ansøg <mark>her</mark></p>
+            </p>
+            <br>
+
+            <P> Kunne du tænke dig at være en del af teamet?</P>
+            <br>
+            <p>Ansøg <span class="highlight">her</span></p>
+        </div>
     </div>
 </section>
 
