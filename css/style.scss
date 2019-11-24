@@ -312,8 +312,13 @@ p {
     }
 }
 
+/* TEAM-side */
+
 .team {
     margin-bottom: 0.17em;
+  .wrapper {
+      @media screen and (min-width: 992px) {
+      }
 
     h1 {
         font-family: $inter-font, $roboto-font;
@@ -333,49 +338,79 @@ p {
         flex-direction: column;
         align-items: center;
 
-        .profil {
-            margin-bottom: 20px;
+      .profil {
+        margin-bottom: 20px;
 
-            .textprofil {
-                position: absolute;
-                padding-left: 15px;
-                padding-top: 258px;
-                z-index: 1;
+        .textprofil {
+          position: absolute;
+          padding-left: 15px;
+          padding-top: 258px;
+          z-index: 1;
 
-                h1 {
-                    font-family: $roboto-font, $inter-font;
-                    color: $white;
-                    margin: 0;
-                    font-size: 34px;
-                    text-align: left;
-                }
+          h1 {
+            font-family: $roboto-font, $inter-font;
+            color: $white;
+            margin: 0;
+            font-size: 34px;
+            text-align: left;
+          }
 
 
-                p {
-                    font-family: $roboto-font, $inter-font;
-                    color: $white;
-                    margin-top: 0;
-                    font-size: 19px;
-                }
-            }
-
-            .gradientimg {
-                width: 328px;
-                height: 334px;
-                position: absolute;
-                background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
-                /*
-                background-image: linear-gradient(to bottom, transparent 50%, black 100%);
-                */
-            }
-            img {
-                width: 328px;
-            }
+          p {
+            font-family: $roboto-font, $inter-font;
+            color: $white;
+            margin-top: 0;
+            font-size: 19px;
+          }
         }
 
+        .gradientimg {
+          width: 328px;
+          height: 334px;
+          position: absolute;
+          background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
+          /*
+          background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+          */
+        }
+
+        img {
+          width: 328px;
+        }
+      }
     }
+  }
 }
 
 
+.praktik {
+  background: $white;
+  width: 100%;
 
+  .ompraktik {
+    h2 {
+      font-family: $roboto-font;
+      font-size: 32px;
+
+      .highlight {
+        color: $orange;
+      }
+    }
+    h3 {
+      font-family: $roboto-font;
+      font-size: 24px;
+    }
+
+    p {
+      font-family: $roboto-font;
+      font-size: 18px;
+      margin: 26px 0 0 0;
+
+      .highlight {
+        color: $orange;
+
+      }
+    }
+  }
+}
 
