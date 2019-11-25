@@ -3,6 +3,19 @@
 body{
     background: $off-white;
 }
+
+h1,h2,h3 {
+  font-family: $inter-font;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+
+p {
+  font-family: $roboto-font;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
 a{
     text-decoration: none;
     color: $off-white;
@@ -12,6 +25,7 @@ a{
     padding: 1rem 2rem;
     margin: 0 auto;
 }
+
 .highlight{
     color: $orange;
 }
@@ -107,9 +121,8 @@ svg{
 }
 
 .intro-section, .subheader{
-    background: linear-gradient(to bottom, rgba($navy, 0.9), rgba($navy, 0.9)), url('../img/bg-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
+  background: linear-gradient(to bottom, rgba($navy, 0.9), rgba($navy, 0.9)), url('../img/bg-pattern.jpg') center center;
+  background-size: cover;
     color: $off-white;
 }
 .intro-content{
@@ -165,21 +178,10 @@ svg{
 
 
 
-h1,h2,h3 {
-    font-family: $inter-font;
-    margin-bottom: 0;
-    font-weight: 900;
-}
-
-p {
-    font-family: $roboto-font;
-    font-weight: 300;
-    line-height: 1.6;
-}
 
 
-/* Ydelser */
-.webudvikling {
+/* Ydelser - Stephanie */
+.webudvikling, .markedsføring, .hosting {
     .wrapper {
         .segment {
             p {
@@ -187,14 +189,28 @@ p {
             }
         }
     }
+
+  .image-webudvikling {
+    background: url("../img/udvikling.jpg") center center;
+    background-size: cover;
+    height: 340px;
+    margin-bottom: 25px;
+  }
+
+  .image-analyse {
+    background: url("../img/analyse.jpg")  center center;
+    background-size: cover;
+    height: 340px;
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .webudvikling, .markedsføring {
+    .webudvikling, .markedsføring, .hosting {
         .wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 25px;
+            grid-gap: 35px;
 
             .segment {
                 grid-column: (1);
@@ -208,6 +224,20 @@ p {
                 grid-column: (3);
             }
         }
+
+      .image-webudvikling {
+        background: url("../img/udvikling.jpg") center center;
+        background-size: cover;
+        height: 400px;
+        margin-bottom: 25px;
+      }
+
+      .image-analyse {
+        background: url("../img/analyse.jpg")  center -350px;
+        background-size: cover;
+        height: 400px;
+        margin-bottom: 25px;
+      }
     }
 }
 
