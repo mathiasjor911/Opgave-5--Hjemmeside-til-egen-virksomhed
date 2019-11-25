@@ -210,7 +210,7 @@ svg{
         .wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 35px;
+            grid-gap: 50px;
 
             .segment {
                 grid-column: (1);
@@ -444,3 +444,58 @@ svg{
   }
 }
 
+
+
+/* Footer Stephanie */
+.footer {
+  background: $navy;
+  color: $off-white;
+  padding-top: 20px;
+
+  .wrapper {
+    .logo {
+      font-family: $inter-font;
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+
+    .footer-wrapper {
+      display: flex;
+      margin-bottom: 20px;
+
+      p {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    svg {
+      color: $off-white;
+    }
+  }
+
+    .some-footer {
+      background: darken($navy, 10);
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+
+      .copyright-box {
+        .copyright {
+          font-size: 12px;
+        }
+      }
+
+      .some-box {
+        svg {
+          width: 15px;
+          height: auto;
+          padding: 0 5px;
+          margin-top: 0.8em;
+        }
+      }
+    }
+}
