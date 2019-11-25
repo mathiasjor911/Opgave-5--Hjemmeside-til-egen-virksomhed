@@ -20,6 +20,10 @@ svg {
   color: #ff7f50;
   stroke-width: 1; }
 
+hr {
+  width: 80px;
+  border: 2px solid #ff7f50; }
+
 /* Navbar / Intro Section */
 .navbar {
   font-family: "Inter UI", sans-serif;
@@ -27,8 +31,10 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
-  flex-wrap: wrap; }
+  padding: 1em 0; }
+  @media screen and (max-width: 992px) {
+    .navbar {
+      flex-wrap: wrap; } }
   .navbar .logo {
     font-family: "Inter UI", sans-serif;
     font-weight: 900;
@@ -46,11 +52,11 @@ svg {
   .navbar .nav-links {
     list-style: none;
     display: flex;
-    text-align: right;
-    width: 100%; }
+    text-align: right; }
     @media screen and (max-width: 992px) {
       .navbar .nav-links {
-        display: none; } }
+        display: none;
+        width: 100%; } }
     .navbar .nav-links li {
       padding: 0;
       margin: 0 1em; }
@@ -112,6 +118,13 @@ svg {
   .intro-content p {
     line-height: 1.4;
     font-size: 18px; }
+
+.subheader .intro-content {
+  text-align: center;
+  max-width: 100%; }
+  .subheader .intro-content h1 {
+    font-size: 56px;
+    text-transform: uppercase; }
 
 /* Feature section */
 .front-features {

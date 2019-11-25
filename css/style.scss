@@ -20,6 +20,11 @@ svg{
     color: $orange;
     stroke-width: 1;
 }
+
+hr{
+    width: 80px;
+    border: 2px solid $orange;
+}
 /* Navbar / Intro Section */
 .navbar{
     font-family: $inter-font;
@@ -28,7 +33,10 @@ svg{
     justify-content: space-between;
     align-items: center;
     padding: 1em 0;
-    flex-wrap: wrap;
+    
+    @media screen and (max-width: 992px){
+        flex-wrap: wrap;
+    }
 
     .logo{
         font-family: $inter-font;
@@ -55,10 +63,11 @@ svg{
         list-style: none;
         display: flex;
         text-align: right;
-        width: 100%;
+        ;
 
         @media screen and (max-width: 992px){
             display: none;
+            width: 100%
         }
 
         li{
@@ -138,6 +147,8 @@ svg{
     color: $off-white;
 }
 
+
+
 .intro-content{
     padding: 6em 0 8em;
     max-width: 600px;
@@ -150,6 +161,19 @@ svg{
         font-size: 18px;
     }
 
+}
+
+.subheader{
+    .intro-content{
+        text-align: center;
+        max-width: 100%;
+
+        h1{
+            font-size: 56px;
+            text-transform: uppercase;
+        }
+    
+    }
 }
 /* Feature section */
 .front-features{
