@@ -4,6 +4,16 @@
 body {
   background: #f5f5f5; }
 
+h1, h2, h3 {
+  font-family: "Inter UI", sans-serif;
+  margin-bottom: 0;
+  font-weight: 900; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.6; }
+
 a {
   text-decoration: none;
   color: #f5f5f5; }
@@ -79,8 +89,7 @@ svg {
           border-color: #f5f5f5; }
 
 .intro-section, .subheader {
-  background: linear-gradient(to bottom, rgba(31, 31, 41, 0.9), rgba(31, 31, 41, 0.9)), url("../img/bg-pattern.jpg");
-  background-position: center center;
+  background: linear-gradient(to bottom, rgba(31, 31, 41, 0.9), rgba(31, 31, 41, 0.9)), url("../img/bg-pattern.jpg") center center;
   background-size: cover;
   color: #f5f5f5; }
 
@@ -122,36 +131,48 @@ svg {
     width: 70px;
     height: auto; }
 
-h1, h2, h3 {
-  font-family: "Inter UI", sans-serif;
-  margin-bottom: 0;
-  font-weight: 900; }
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 1.6; }
-
-/* Ydelser */
-.webudvikling .wrapper .segment p {
+/* Ydelser - Stephanie */
+.webudvikling .wrapper .segment p, .markedsføring .wrapper .segment p, .hosting .wrapper .segment p {
   margin-bottom: 40px; }
 
+.webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
+  background: url("../img/udvikling.jpg") center center;
+  background-size: cover;
+  height: 340px;
+  margin-bottom: 25px; }
+
+.webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
+  background: url("../img/analyse.jpg") center center;
+  background-size: cover;
+  height: 340px;
+  margin-bottom: 25px; }
+
 @media screen and (min-width: 992px) {
-  .webudvikling .wrapper, .markedsføring .wrapper {
+  .webudvikling .wrapper, .markedsføring .wrapper, .hosting .wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px; }
-    .webudvikling .wrapper .segment, .markedsføring .wrapper .segment {
+    grid-gap: 35px; }
+    .webudvikling .wrapper .segment, .markedsføring .wrapper .segment, .hosting .wrapper .segment {
       -ms-grid-column: 1;
       grid-column: 1; }
-    .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2) {
+    .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2), .hosting .wrapper .segment:nth-of-type(2) {
       -ms-grid-column: 2;
       grid-column: 2; }
-    .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3) {
+    .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3), .hosting .wrapper .segment:nth-of-type(3) {
       -ms-grid-column: 3;
-      grid-column: 3; } }
+      grid-column: 3; }
+  .webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
+    background: url("../img/udvikling.jpg") center center;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 25px; }
+  .webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
+    background: url("../img/analyse.jpg") center -350px;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 25px; } }
 
 /* Abdullah CSS */
 .sectionomos .wrapper {
@@ -218,40 +239,66 @@ p {
     margin: 0 0 5px;
     font-size: 2em; }
 
+/* TEAM-side */
 .team {
-  margin-bottom: -0.3em; }
-  .team h2 {
+  margin-bottom: 0.17em; }
+  .team .wrapper h1 {
     font-family: "Inter UI", sans-serif, "Roboto", sans-serif;
-    color: #1f1f29; }
-    .team h2 mark {
-      color: #ff7f50;
-      background: transparent; }
-  .team .teamprofiles .profil .textprofil {
-    position: absolute;
-    padding-left: 15px;
-    padding-top: 218px;
-    z-index: 1; }
-    .team .teamprofiles .profil .textprofil h1 {
-      font-family: "Inter UI", sans-serif;
-      font-size: 1.5rem;
-      color: #fff;
-      margin: 0; }
-    .team .teamprofiles .profil .textprofil p {
-      font-family: "Inter UI", sans-serif;
-      color: #fff; }
-  .team .teamprofiles .profil .gradientimg {
-    width: 312px;
-    height: 318px;
-    position: absolute;
-    background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 10, 0, 0), rgba(255, 10, 0, 0), #2c2626c9);
-    /*
-                background-image: linear-gradient(to bottom, transparent 50%, black 100%);
-                */ }
-  .team .praktik {
-    background: #fff;
-    width: 100%; }
-    .team .praktik p mark {
-      color: #ff7f50;
-      background: transparent; }
+    color: #1f1f29;
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 40px; }
+    .team .wrapper h1 .highlight {
+      color: #ff7f50; }
+  .team .wrapper .teamprofiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .team .wrapper .teamprofiles .profil {
+      margin-bottom: 20px; }
+      .team .wrapper .teamprofiles .profil .textprofil {
+        position: absolute;
+        padding-left: 15px;
+        padding-top: 258px;
+        z-index: 1; }
+        .team .wrapper .teamprofiles .profil .textprofil h1 {
+          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+          color: #fff;
+          margin: 0;
+          font-size: 34px;
+          text-align: left; }
+        .team .wrapper .teamprofiles .profil .textprofil p {
+          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+          color: #fff;
+          margin-top: 0;
+          font-size: 19px; }
+      .team .wrapper .teamprofiles .profil .gradientimg {
+        width: 328px;
+        height: 334px;
+        position: absolute;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
+        /*
+          background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+          */ }
+      .team .wrapper .teamprofiles .profil img {
+        width: 328px; }
+
+.praktik {
+  background: #fff;
+  width: 100%; }
+  .praktik .ompraktik h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px; }
+    .praktik .ompraktik h2 .highlight {
+      color: #ff7f50; }
+  .praktik .ompraktik h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px; }
+  .praktik .ompraktik p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: 26px 0 0 0; }
+    .praktik .ompraktik p .highlight {
+      color: #ff7f50; }
 
 /*# sourceMappingURL=style.css.map */
