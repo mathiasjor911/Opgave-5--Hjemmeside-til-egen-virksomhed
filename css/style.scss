@@ -212,7 +212,21 @@ hr{
         height: auto;
     }
 }
+/* Ydelser - section */
+.ydelser-section{
+    background: $navy;
+    padding: 4em 0;
+    color: $off-white;
 
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 50px;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+}
 
 
 h1,h2,h3 {
