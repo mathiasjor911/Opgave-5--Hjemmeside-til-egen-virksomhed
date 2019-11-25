@@ -27,7 +27,8 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0; }
+  padding: 1em 0;
+  flex-wrap: wrap; }
   .navbar .logo {
     font-family: "Inter UI", sans-serif;
     font-weight: 900;
@@ -35,23 +36,32 @@ svg {
   .navbar .nav-menu {
     cursor: pointer;
     display: none; }
+    .navbar .nav-menu svg {
+      color: #f5f5f5;
+      width: 28px;
+      height: auto; }
     @media screen and (max-width: 992px) {
       .navbar .nav-menu {
         display: flex; } }
   .navbar .nav-links {
     list-style: none;
-    display: flex; }
+    display: flex;
+    text-align: right;
+    width: 100%; }
     @media screen and (max-width: 992px) {
       .navbar .nav-links {
         display: none; } }
     .navbar .nav-links li {
       padding: 0;
       margin: 0 1em; }
+      @media screen and (max-width: 992px) {
+        .navbar .nav-links li {
+          margin: 0.7em 0.5em; } }
     .navbar .nav-links .nav-link {
       color: #f5f5f5;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
-      font-size: 13px;
+      font-size: 15px;
       text-transform: uppercase;
       opacity: 0.7;
       transition: 200ms ease-in-out; }
@@ -63,6 +73,9 @@ svg {
   .navbar .dropdown-menu {
     display: none;
     position: absolute; }
+    @media screen and (max-width: 992px) {
+      .navbar .dropdown-menu {
+        position: relative; } }
     .navbar .dropdown-menu .dropdown-content {
       display: flex;
       flex-direction: column;
@@ -70,10 +83,17 @@ svg {
       .navbar .dropdown-menu .dropdown-content .dropdown-link {
         color: rgba(245, 245, 245, 0.7);
         font-size: 13px;
+        text-transform: uppercase;
         display: block;
         border-left: 1px solid rgba(245, 245, 245, 0.5);
         padding: 0.6em 1em;
         transition: 200ms ease-in-out; }
+        @media screen and (max-width: 992px) {
+          .navbar .dropdown-menu .dropdown-content .dropdown-link {
+            padding: 0.6em 1em;
+            border-left: none;
+            border-right: 1px solid rgba(245, 245, 245, 0.5);
+            font-size: 15px; } }
         .navbar .dropdown-menu .dropdown-content .dropdown-link:hover {
           color: #f5f5f5;
           border-color: #f5f5f5; }
@@ -218,40 +238,66 @@ p {
     margin: 0 0 5px;
     font-size: 2em; }
 
+/* TEAM-side */
 .team {
-  margin-bottom: -0.3em; }
-  .team h2 {
+  margin-bottom: 0.17em; }
+  .team .wrapper h1 {
     font-family: "Inter UI", sans-serif, "Roboto", sans-serif;
-    color: #1f1f29; }
-    .team h2 mark {
-      color: #ff7f50;
-      background: transparent; }
-  .team .teamprofiles .profil .textprofil {
-    position: absolute;
-    padding-left: 15px;
-    padding-top: 218px;
-    z-index: 1; }
-    .team .teamprofiles .profil .textprofil h1 {
-      font-family: "Inter UI", sans-serif;
-      font-size: 1.5rem;
-      color: #fff;
-      margin: 0; }
-    .team .teamprofiles .profil .textprofil p {
-      font-family: "Inter UI", sans-serif;
-      color: #fff; }
-  .team .teamprofiles .profil .gradientimg {
-    width: 312px;
-    height: 318px;
-    position: absolute;
-    background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 10, 0, 0), rgba(255, 10, 0, 0), #2c2626c9);
-    /*
-                background-image: linear-gradient(to bottom, transparent 50%, black 100%);
-                */ }
-  .team .praktik {
-    background: #fff;
-    width: 100%; }
-    .team .praktik p mark {
-      color: #ff7f50;
-      background: transparent; }
+    color: #1f1f29;
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 40px; }
+    .team .wrapper h1 .highlight {
+      color: #ff7f50; }
+  .team .wrapper .teamprofiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .team .wrapper .teamprofiles .profil {
+      margin-bottom: 20px; }
+      .team .wrapper .teamprofiles .profil .textprofil {
+        position: absolute;
+        padding-left: 15px;
+        padding-top: 258px;
+        z-index: 1; }
+        .team .wrapper .teamprofiles .profil .textprofil h1 {
+          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+          color: #fff;
+          margin: 0;
+          font-size: 34px;
+          text-align: left; }
+        .team .wrapper .teamprofiles .profil .textprofil p {
+          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+          color: #fff;
+          margin-top: 0;
+          font-size: 19px; }
+      .team .wrapper .teamprofiles .profil .gradientimg {
+        width: 328px;
+        height: 334px;
+        position: absolute;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
+        /*
+          background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+          */ }
+      .team .wrapper .teamprofiles .profil img {
+        width: 328px; }
+
+.praktik {
+  background: #fff;
+  width: 100%; }
+  .praktik .ompraktik h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px; }
+    .praktik .ompraktik h2 .highlight {
+      color: #ff7f50; }
+  .praktik .ompraktik h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px; }
+  .praktik .ompraktik p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: 26px 0 0 0; }
+    .praktik .ompraktik p .highlight {
+      color: #ff7f50; }
 
 /*# sourceMappingURL=style.css.map */

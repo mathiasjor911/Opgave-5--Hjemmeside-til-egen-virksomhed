@@ -28,6 +28,7 @@ svg{
     justify-content: space-between;
     align-items: center;
     padding: 1em 0;
+    flex-wrap: wrap;
 
     .logo{
         font-family: $inter-font;
@@ -39,6 +40,12 @@ svg{
         cursor: pointer;
         display: none;
 
+        svg{
+        color: $off-white;
+        width: 28px;
+        height: auto;
+    }
+
         @media screen and (max-width: 992px){
             display: flex;
         }
@@ -47,6 +54,8 @@ svg{
     .nav-links{
         list-style: none;
         display: flex;
+        text-align: right;
+        width: 100%;
 
         @media screen and (max-width: 992px){
             display: none;
@@ -55,12 +64,16 @@ svg{
         li{
             padding: 0;
             margin: 0 1em;
+
+            @media screen and (max-width: 992px) {
+                margin: 0.7em 0.5em;
+            }
         }
         .nav-link{
             color: $off-white;
             font-family: $roboto-font;
             font-weight: 300;
-            font-size: 13px;
+            font-size: 15px;
             text-transform: uppercase;
             opacity: 0.7;
             transition: 200ms ease-in-out;
@@ -78,6 +91,10 @@ svg{
         display: none;
         position: absolute;
 
+        @media screen and (max-width: 992px) {
+            position: relative;
+        }
+
 
         .dropdown-content{
             display: flex;
@@ -87,10 +104,18 @@ svg{
             .dropdown-link{
                 color: rgba($color: $off-white, $alpha: 0.7);
                 font-size: 13px;
+                text-transform: uppercase;
                 display: block;
                 border-left: 1px solid rgba($color: $off-white, $alpha: 0.5);
                 padding: 0.6em 1em;
                 transition: 200ms ease-in-out;
+
+                @media screen and (max-width: 992px) {
+                    padding: 0.6em 1em;
+                    border-left: none;
+                    border-right: 1px solid rgba($color: $off-white, $alpha: 0.5);
+                    font-size: 15px;
+                }
 
                 &:hover{
                     color: $off-white;
@@ -112,6 +137,7 @@ svg{
     background-size: cover;
     color: $off-white;
 }
+
 .intro-content{
     padding: 6em 0 8em;
     max-width: 600px;
