@@ -226,6 +226,17 @@ hr{
     h2{
         text-transform: uppercase;
     }
+    .ydelses-billede{
+        background: linear-gradient(to bottom, rgba($navy, 0.2), rgba($navy, 0.8))
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        z-index:-1;
+        display:block;
+        position: relative;
+
+    }
 }
 
 

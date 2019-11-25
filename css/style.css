@@ -169,6 +169,14 @@ hr {
          column-gap: 50px; }
   .ydelser-section h2 {
     text-transform: uppercase; }
+  .ydelser-section .ydelses-billede {
+    background: linear-gradient(to bottom, rgba(31, 31, 41, 0.2), rgba(31, 31, 41, 0.8)); }
+  .ydelser-section img {
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+    display: block;
+    position: relative; }
 
 h1, h2, h3 {
   font-family: "Inter UI", sans-serif;
