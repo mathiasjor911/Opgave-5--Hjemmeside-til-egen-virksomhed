@@ -305,7 +305,7 @@ svg {
 .footer {
   background: #1f1f29;
   color: #f5f5f5;
-  padding-top: 20px; }
+  padding-top: 40px; }
   .footer .wrapper .logo {
     font-family: "Inter UI", sans-serif;
     font-weight: 900;
@@ -320,16 +320,37 @@ svg {
   .footer .wrapper svg {
     color: #f5f5f5; }
   .footer .some-footer {
-    background: #09090c;
+    background: #16161d;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px; }
+    max-width: 1400px;
+    padding: 1rem 2rem; }
     .footer .some-footer .copyright-box .copyright {
       font-size: 12px; }
     .footer .some-footer .some-box svg {
       width: 15px;
       height: auto;
       padding: 0 5px;
-      margin-top: 0.8em; }
+      margin-top: 0.8em;
+      color: #f5f5f5; }
+
+@media screen and (min-width: 992px) {
+  .footer .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr); }
+    .footer .wrapper .footer-logo {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+      grid-column: 1/span 3; }
+      .footer .wrapper .footer-logo .logo {
+        font-size: 28px; }
+    .footer .wrapper .footer-info {
+      -ms-grid-column: 4;
+      grid-column: 4;
+      margin-top: 25px; }
+      .footer .wrapper .footer-info .footer-wrapper {
+        justify-content: flex-end; } }
 
 /*# sourceMappingURL=style.css.map */

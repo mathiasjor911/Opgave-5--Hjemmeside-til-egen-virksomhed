@@ -450,7 +450,7 @@ svg{
 .footer {
   background: $navy;
   color: $off-white;
-  padding-top: 20px;
+  padding-top: 40px;
 
   .wrapper {
     .logo {
@@ -478,10 +478,11 @@ svg{
   }
 
     .some-footer {
-      background: darken($navy, 10);
+      background: darken($navy, 4);
       display: flex;
       justify-content: space-between;
-      padding-top: 20px;
+      max-width: 1400px;
+      padding: 1rem 2rem;
 
       .copyright-box {
         .copyright {
@@ -495,7 +496,34 @@ svg{
           height: auto;
           padding: 0 5px;
           margin-top: 0.8em;
+          color: $off-white;
         }
       }
     }
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      .footer-logo {
+        grid-column: 1/span 3;
+
+        .logo {
+          font-size: 28px;
+        }
+      }
+
+      .footer-info {
+        grid-column: (4);
+        margin-top: 25px;
+
+        .footer-wrapper {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
 }
