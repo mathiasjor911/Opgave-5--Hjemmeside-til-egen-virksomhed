@@ -73,6 +73,10 @@ hr {
       transition: 200ms ease-in-out; }
       .navbar .nav-links .nav-link:hover {
         opacity: 1; }
+      .navbar .nav-links .nav-link svg {
+        color: white;
+        width: 13px;
+        height: 13px; }
     .navbar .nav-links .active {
       font-weight: 400;
       opacity: 1; }

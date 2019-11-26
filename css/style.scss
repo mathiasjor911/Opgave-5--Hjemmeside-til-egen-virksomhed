@@ -90,6 +90,12 @@ hr{
             &:hover{
                 opacity: 1;
             }
+
+            svg{
+                color: white;
+                width: 13px;
+                height: 13px;
+            }
         }
         .active{
             font-weight: 400;
@@ -227,7 +233,7 @@ hr{
         text-transform: uppercase;
     }
     .ydelses-billede{
-        background: linear-gradient(to bottom, rgba($navy, 0.2), rgba($navy, 0.8))
+        background: linear-gradient(to bottom, rgba($navy, 0.2), rgba($navy, 0.8));
     }
     img{
         max-width: 100%;
