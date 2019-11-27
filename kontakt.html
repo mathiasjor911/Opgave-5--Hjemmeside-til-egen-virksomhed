@@ -40,9 +40,9 @@
 
 <section class="kontakt">
     <div class="wrapper">
+        <div class="kontakttekst">
         <h2>HAR DU SPØRGSMÅL?</h2>
         <h3>SÅ SKRIV TIL OS</h3>
-        <div class="kontakttekst">
             <p>har du et projekt eller ide i tankerne? så er vi klar til at få dine ideer og visioner ud i virkeligheden.
                 skriv til os her eller på vores mail, og så aftaler vi et møde og snakker om projektets muligheder.
             </p>
@@ -63,16 +63,16 @@
                 </div>
             </form>
         </div>
-        <div class="kontaktinfo">
-            <h3>KONTAKT INFO</h3>
-            <p>TLF: +45 11 22 33 44</p>
-            <br>
-            <p>Email: hej@mail.dk</p>
-        </div>
+
     </div>
 </section>
 <section class="kontaktmap">
     <div class="wrapper">
+        <div class="kontaktinfo">
+            <h3>KONTAKT INFO</h3>
+            <p>TLF: +45 11 22 33 44</p>
+            <p>Email: hej@mail.dk</p>
+        </div>
         <div class="maptekst">
             <i data-feather="map-pin"></i>
             <p>FIND OS</p>
@@ -80,10 +80,22 @@
         <div id="map"></div>
     </div>
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function (e) {
-    });
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    feather.replace();
+</script>
+<script src="js/navbar.js"></script>
+<script>
+    $(document).ready(function() {
+        var mapdiv = document.getElementById('map');
+        var map = new google.maps.Map(mapdiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+        });
+
+    });</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSWV-NvLSTdEkJiymT8_6efN-csDohN4&callback=initMap" async defer>
 </script>
 </body>
 </html>
