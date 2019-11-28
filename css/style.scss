@@ -220,13 +220,13 @@ background: $orange;
 }
 /* Feature section */
 .front-features{
-    padding: 4em 0;
+    padding: 3em 0;
     background: $white;
 
     .wrapper{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-
+        padding: 4em 0;
         @media screen and (max-width: 992px) {
             grid-template-columns: 1fr;
         }
@@ -258,7 +258,7 @@ background: $orange;
 /* Ydelser - section */
 .ydelser-section{
     background: $navy;
-    padding: 4em 0;
+    padding: 3em 0;
     color: $off-white;
     position: relative;
     z-index: 0;
@@ -267,7 +267,7 @@ background: $orange;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 50px;
-        padding: 5em 0;
+        padding: 4em 0;
     }
     h2{
         text-transform: uppercase;
@@ -299,12 +299,13 @@ background: $orange;
 /* Møde section */
 .mode-section{
   background: $white;
+  padding: 3em 0;
 
   .wrapper{
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 50px;
-    padding: 5em 0;
+    padding: 4em 0;
   }
 
   img{
@@ -780,7 +781,7 @@ background: $orange;
 .footer {
   background: $navy;
   color: $off-white;
-  padding-top: 40px;
+  padding-top: 3em;
 
   .wrapper {
     .logo {
@@ -790,7 +791,8 @@ background: $orange;
     }
 
     p {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      max-width: 600px;
     }
 
     .footer-wrapper {
@@ -809,10 +811,13 @@ background: $orange;
 
     .some-footer {
       background: darken($navy, 4);
-      display: flex;
-      justify-content: space-between;
-      max-width: 100%;
-      padding: 1rem 2rem;
+      margin-top: 2em;
+
+      .wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.25em 3em;
+      }
 
       .copyright-box {
         .copyright {
