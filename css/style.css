@@ -32,7 +32,8 @@ svg {
 
 hr {
   width: 80px;
-  border: 2px solid #ff7f50; }
+  border: 2px solid #ff7f50;
+  background: #ff7f50; }
 
 /* Navbar / Intro Section */
 .navbar {
@@ -191,27 +192,27 @@ hr {
     display: block;
     position: relative; }
 
-h1, h2, h3 {
-  font-family: "Inter UI", sans-serif;
-  margin-bottom: 0;
-  font-weight: 900; }
-
 /* Ydelser - Stephanie */
+.webudvikling .wrapper hr, .markedsføring .wrapper hr, .hosting .wrapper hr {
+  margin: 0; }
+
 .webudvikling .wrapper .segment p, .markedsføring .wrapper .segment p, .hosting .wrapper .segment p {
   margin-bottom: 40px; }
-
 
 .webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
   background: url("../img/udvikling.jpg") center center;
   background-size: cover;
   height: 340px;
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
 
 .webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
   background: url("../img/analyse.jpg") center center;
   background-size: cover;
   height: 340px;
-  margin-bottom: 25px; }
+  margin-bottom: 30px; }
+
+.webudvikling .wrapper {
+  padding-top: 3rem; }
 
 @media screen and (min-width: 992px) {
   .webudvikling .wrapper, .markedsføring .wrapper, .hosting .wrapper {
@@ -219,26 +220,37 @@ h1, h2, h3 {
     display: grid;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px; }
+    grid-column-gap: 50px;
+    margin: 50px 0; }
+    .webudvikling .wrapper hr, .markedsføring .wrapper hr, .hosting .wrapper hr {
+      margin-bottom: 10px; }
     .webudvikling .wrapper .segment, .markedsføring .wrapper .segment, .hosting .wrapper .segment {
       -ms-grid-column: 1;
       grid-column: 1; }
+      .webudvikling .wrapper .segment p, .markedsføring .wrapper .segment p, .hosting .wrapper .segment p {
+        margin-bottom: 0; }
     .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2), .hosting .wrapper .segment:nth-of-type(2) {
       -ms-grid-column: 2;
       grid-column: 2; }
+      .webudvikling .wrapper .segment:nth-of-type(2) p, .markedsføring .wrapper .segment:nth-of-type(2) p, .hosting .wrapper .segment:nth-of-type(2) p {
+        margin-bottom: 0; }
     .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3), .hosting .wrapper .segment:nth-of-type(3) {
       -ms-grid-column: 3;
       grid-column: 3; }
+      .webudvikling .wrapper .segment:nth-of-type(3) p, .markedsføring .wrapper .segment:nth-of-type(3) p, .hosting .wrapper .segment:nth-of-type(3) p {
+        margin-bottom: 0; }
   .webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
     background: url("../img/udvikling.jpg") center center;
     background-size: cover;
     height: 400px;
-    margin-bottom: 25px; }
+    margin-bottom: 35px; }
   .webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
     background: url("../img/analyse.jpg") center -350px;
     background-size: cover;
     height: 400px;
-    margin-bottom: 25px; } }
+    margin-bottom: 35px; }
+  .webudvikling .wrapper {
+    padding-top: 1rem; } }
 
 /* Abdullah CSS */
 .sectionomos .wrapper {
@@ -306,6 +318,7 @@ h1, h2, h3 {
     font-size: 2em; }
 
 /* TEAM-side */
+/* af sara */
 .team {
   margin-bottom: 0.17em; }
   .team .wrapper h1 {
@@ -320,34 +333,40 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .team .wrapper .teamprofiles h1 {
+      font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+      color: #fff;
+      margin: 0;
+      font-size: 34px;
+      text-align: left; }
+    .team .wrapper .teamprofiles p {
+      font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
+      color: #fff;
+      margin-top: 0;
+      font-size: 19px; }
     .team .wrapper .teamprofiles .profil {
-      margin-bottom: 20px; }
-      .team .wrapper .teamprofiles .profil .textprofil {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29), url("../img/Group 6.jpg");
+      background-size: cover;
+      margin: 10px 10px 10px 10px;
+      position: relative;
+      max-width: 400px;
+      min-width: 100px;
+      width: 100%;
+      max-height: 390px;
+      min-height: 344px;
+      height: 100%; }
+      .team .wrapper .teamprofiles .profil h1 {
         position: absolute;
-        padding-left: 15px;
-        padding-top: 258px;
-        z-index: 1; }
-        .team .wrapper .teamprofiles .profil .textprofil h1 {
-          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
-          color: #fff;
-          margin: 0;
-          font-size: 34px;
-          text-align: left; }
-        .team .wrapper .teamprofiles .profil .textprofil p {
-          font-family: "Roboto", sans-serif, "Inter UI", sans-serif;
-          color: #fff;
-          margin-top: 0;
-          font-size: 19px; }
-      .team .wrapper .teamprofiles .profil .gradientimg {
-        width: 328px;
-        height: 334px;
+        padding-bottom: 10px;
+        bottom: 40px;
+        left: 20px;
+        margin: 0; }
+      .team .wrapper .teamprofiles .profil p {
         position: absolute;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
-        /*
-          background-image: linear-gradient(to bottom, transparent 50%, black 100%);
-          */ }
-      .team .wrapper .teamprofiles .profil img {
-        width: 328px; }
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        margin: 0; }
 
 .praktik {
   background: #fff;
@@ -360,12 +379,141 @@ h1, h2, h3 {
   .praktik .ompraktik h3 {
     font-family: "Roboto", sans-serif;
     font-size: 24px; }
-  .praktik .ompraktik p {
+  .praktik .ompraktik .tekstpraktik {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-top: 40px; }
+    .praktik .ompraktik .tekstpraktik p {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      margin: 26px 0 0 0; }
+      .praktik .ompraktik .tekstpraktik p .highlight {
+        color: #ff7f50; }
+
+@media screen and (min-width: 768px) {
+  .team .wrapper h1 {
+    text-align: left; }
+  .team .wrapper .teamprofiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; }
+    .team .wrapper .teamprofiles .profil {
+      width: 40%;
+      height: 300px;
+      margin: 10px 10px 20px 10px; }
+  .praktik .ompraktik .tekstpraktik {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+    padding-top: 40px; }
+    .praktik .ompraktik .tekstpraktik p:nth-of-type(1) {
+      -ms-grid-column: 1;
+      grid-column: 1; }
+    .praktik .ompraktik .tekstpraktik:nth-of-type(2) {
+      -ms-grid-column: 2;
+      grid-column: 2; }
+    .praktik .ompraktik .tekstpraktik:nth-of-type(3) {
+      -ms-grid-column: 3;
+      grid-column: 3; } }
+
+@media screen and (min-width: 992px) {
+  .team .wrapper h1 {
+    text-align: left; }
+  .team .wrapper .teamprofiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%; }
+    .team .wrapper .teamprofiles .profil {
+      width: 312px;
+      height: 300px;
+      margin: 10px 10px 20px 10px; } }
+
+/* kontakt-side */
+/* af sara */
+.kontakt {
+  margin-bottom: 2.17em; }
+  .kontakt .wrapper .kontakttekst p {
+    padding-bottom: 15px; }
+  .kontakt .wrapper .kontakttekst h2 {
+    font-size: 32px;
+    padding-right: 50px; }
+  .kontakt .wrapper .kontakttekst h3 {
+    font-size: 24px; }
+  .kontakt .wrapper .kontaktformular form p {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    margin: 26px 0 0 0; }
-    .praktik .ompraktik p .highlight {
-      color: #ff7f50; }
+    margin: 0 0 -11px 0; }
+  .kontakt .wrapper .kontaktformular form input {
+    border: 3px solid #1f1f29;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .kontakt .wrapper .kontaktformular form textarea {
+    width: 100%;
+    height: 85px;
+    border: 3px solid #1f1f29;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding: 10px; }
+  .kontakt .wrapper .kontaktformular form .kontaktknap {
+    padding-top: 38px; }
+    .kontakt .wrapper .kontaktformular form .kontaktknap button {
+      border: 3px solid #ff7f50;
+      background: #fff;
+      border-radius: 50px;
+      height: 69px;
+      font-family: "Inter UI", sans-serif;
+      color: #ff7f50;
+      font-size: 18px;
+      font-weight: 900;
+      width: 100%; }
+
+.kontaktmap {
+  background: #fff; }
+  .kontaktmap .wrapper .kontaktinfo h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px; }
+  .kontaktmap .wrapper .maptekst {
+    text-align: center;
+    padding-top: 20px; }
+    .kontaktmap .wrapper .maptekst svg {
+      color: #ff7f50;
+      width: 40px;
+      height: auto; }
+    .kontaktmap .wrapper .maptekst p {
+      font-family: "Inter UI", sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      margin-top: 5px; }
+    .kontaktmap .wrapper .maptekst #map {
+      display: block;
+      width: 300px;
+      height: 400px;
+      background-color: grey; }
+
+@media screen and (min-width: 992px) {
+  .kontakt .wrapper {
+    display: flex;
+    flex-direction: row; }
+    .kontakt .wrapper .kontakttekst {
+      width: 50%; }
+      .kontakt .wrapper .kontakttekst p {
+        padding-right: 100px;
+        padding-top: 15px; }
+    .kontakt .wrapper .kontaktformular {
+      width: 50%;
+      padding-top: 30px; } }
+
 /* Footer Stephanie */
 .footer {
   background: #1f1f29;
