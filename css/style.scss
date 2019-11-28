@@ -603,6 +603,7 @@ hr{
   .wrapper {
 
     .kontakttekst {
+      padding-top: 20px;
       p {
         padding-bottom: 15px;
       }
@@ -614,7 +615,32 @@ hr{
         font-size: 24px;
       }
     }
+    .kontaktinfo {
+      h3 {
+        font-family: $roboto-font;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      .kontaktinfo-item {
+        display: flex;
+        margin-top: -10px;
+
+        svg {
+          padding-top: 16px;
+        }
+
+        p {
+          padding-left: 12px;
+        }
+      }
+    }
     .kontaktformular {
+      margin-top:35px;
       form {
         p {
           font-family: $roboto-font;
@@ -622,7 +648,7 @@ hr{
         }
         input {
           border: 3px solid $navy;
-          width: 100%;
+          width: 95%;
           height: 35px;
           margin-bottom: 20px;
           font-family: $roboto-font;
@@ -632,7 +658,7 @@ hr{
 
         }
         textarea {
-          width: 100%;
+          width: 95%;
           height: 85px;
           border: 3px solid $navy;
           font-family: $roboto-font;
@@ -641,7 +667,7 @@ hr{
         }
         .kontaktknap {
           padding-top: 38px;
-          button {
+          .btn {
             border: 3px solid $orange;
             background: $white;
             border-radius: 50px;
@@ -660,15 +686,6 @@ hr{
 .kontaktmap {
   background: $white;
   .wrapper {
-    .kontaktinfo{
-      h3 {
-        font-family: $roboto-font;
-        font-size: 24px;
-      }
-      p {
-
-      }
-    }
     .maptekst {
       text-align: center;
       padding-top: 20px;
@@ -682,12 +699,6 @@ hr{
         font-weight: 900;
         font-size: 22px;
         margin-top: 5px;
-      }
-      #map {
-        display: block;
-        width: 300px;
-        height: 400px;
-        background-color: grey;
       }
     }
   }
@@ -704,6 +715,20 @@ hr{
           padding-right: 100px;
           padding-top: 15px;
 
+        }
+      }
+      .kontaktinfo {
+        .kontaktinfo-item {
+          display: flex;
+          margin-top: -25px;
+
+          svg {
+            padding-top: 32px;
+          }
+
+          p {
+            padding-left: 12px;
+          }
         }
       }
       .kontaktformular {
