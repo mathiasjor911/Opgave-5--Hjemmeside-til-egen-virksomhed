@@ -35,6 +35,27 @@ hr {
   border: 2px solid #ff7f50;
   background: #ff7f50; }
 
+.btn {
+  border: 3px solid #ff7f50;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1em 3.5em;
+  border-radius: 50px;
+  font-family: "Inter UI", sans-serif;
+  color: #ff7f50;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 300ms; }
+  .btn:hover {
+    color: #f5f5f5;
+    background: #ff7f50; }
+  .btn:active {
+    color: #f5f5f5;
+    background: #ff5a1d;
+    border-color: #ff5a1d;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15); }
+
 /* Navbar / Intro Section */
 .navbar {
   font-family: "Inter UI", sans-serif;
@@ -142,13 +163,14 @@ hr {
 
 /* Feature section */
 .front-features {
-  padding: 4em 0;
+  padding: 3em 0;
   background: #fff; }
   .front-features .wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4em 0; }
     @media screen and (max-width: 992px) {
       .front-features .wrapper {
         -ms-grid-columns: 1fr;
@@ -172,25 +194,60 @@ hr {
 /* Ydelser - section */
 .ydelser-section {
   background: #1f1f29;
-  padding: 4em 0;
-  color: #f5f5f5; }
+  padding: 3em 0;
+  color: #f5f5f5;
+  position: relative;
+  z-index: 0; }
   .ydelser-section .wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 50px;
-         column-gap: 50px; }
+         column-gap: 50px;
+    padding: 4em 0; }
   .ydelser-section h2 {
     text-transform: uppercase; }
   .ydelser-section .ydelses-billede {
-    background: linear-gradient(to bottom, rgba(31, 31, 41, 0.2), rgba(31, 31, 41, 0.8)); }
+    background: linear-gradient(to bottom, rgba(31, 31, 41, 0.2), rgba(31, 31, 41, 0.8));
+    position: relative;
+    z-index: 100; }
+    .ydelser-section .ydelses-billede h3 {
+      position: absolute;
+      z-index: 10;
+      bottom: 15px;
+      left: 15px;
+      text-transform: uppercase; }
   .ydelser-section img {
     max-width: 100%;
+    margin-top: 1.5em;
     height: auto;
-    z-index: -1;
+    z-index: 1;
     display: block;
     position: relative; }
+
+
+/* Møde section */
+.mode-section {
+  background: #fff;
+  padding: 3em 0; }
+  .mode-section .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    padding: 4em 0; }
+  .mode-section img {
+    max-width: 100%; }
+  .mode-section hr {
+    margin: auto 0; }
+  .mode-section h2 {
+    font-size: 1.75em;
+    text-transform: uppercase; }
+  .mode-section p {
+    max-width: 640px; }
 
 /* Ydelser - Stephanie */
 .webudvikling .wrapper hr, .markedsføring .wrapper hr, .hosting .wrapper hr {
@@ -518,13 +575,14 @@ hr {
 .footer {
   background: #1f1f29;
   color: #f5f5f5;
-  padding-top: 40px; }
+  padding-top: 3em; }
   .footer .wrapper .logo {
     font-family: "Inter UI", sans-serif;
     font-weight: 900;
     font-size: 24px; }
   .footer .wrapper p {
-    margin-bottom: 40px; }
+    margin-bottom: 20px;
+    max-width: 600px; }
   .footer .wrapper .footer-wrapper {
     display: flex;
     margin-bottom: 20px; }
@@ -534,10 +592,11 @@ hr {
     color: #f5f5f5; }
   .footer .some-footer {
     background: #16161d;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1400px;
-    padding: 1rem 2rem; }
+    margin-top: 2em; }
+    .footer .some-footer .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.25em 3em; }
     .footer .some-footer .copyright-box .copyright {
       font-size: 12px; }
     .footer .some-footer .some-box svg {
