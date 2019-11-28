@@ -39,6 +39,30 @@ hr{
     width: 80px;
     border: 2px solid $orange;
 }
+.btn{
+border: 3px solid $orange;
+text-align: center;
+display: inline-block;
+text-transform: uppercase;
+padding: 1em 3.5em;
+border-radius: 50px;
+font-family: $inter-font;
+color: $orange;
+font-size: 14px;
+font-weight: 900;
+transition: 300ms;
+
+&:hover{
+color: $off-white;
+background: $orange;
+}
+&:active{
+  color: $off-white;
+  background: darken($orange, 10%);
+  border-color: darken($orange, 10%);
+  box-shadow: 0px 4px 16px rgba($color: #000000, $alpha: 0.15);
+}
+}
 /* Navbar / Intro Section */
 .navbar{
     font-family: $inter-font;
@@ -237,7 +261,7 @@ hr{
     padding: 4em 0;
     color: $off-white;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 
     .wrapper{
         display: grid;
@@ -251,9 +275,11 @@ hr{
     .ydelses-billede{
         background: linear-gradient(to bottom, rgba($navy, 0.2), rgba($navy, 0.8));
         position: relative;
+        z-index: 100;
 
         h3{
           position: absolute;
+          z-index: 10;
           bottom: 15px;
           left: 15px;
           text-transform: uppercase;
@@ -263,7 +289,7 @@ hr{
         max-width: 100%;
         margin-top: 1.5em;
         height: auto;
-        z-index:-1;
+        z-index: 1;
         display:block;
         position: relative;
 
@@ -275,13 +301,24 @@ hr{
   background: $white;
 
   .wrapper{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 50px;
     padding: 5em 0;
   }
 
   img{
-    max-width: 500px;
+    max-width: 100%;
+  }
+  hr{
+    margin: auto 0;
+  }
+  h2{
+    font-size: 1.75em;
+    text-transform: uppercase;
+  }
+  p{
+    max-width: 640px;
   }
 }
 
