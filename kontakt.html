@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+    <title>Opgave 5</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- OG Meta Tags-->
+    <meta property="og:title" content="titel" />
+    <meta property="og:url" content="">
+    <meta property=" og:image" content="">
+    <meta property=" og:description" content="Beskrivelse" />
+    <meta property="og:locale" content="da_DK" />
+
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Eget stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Google Fonts og Inter UI-->
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+
+<section class="kontakt">
+    <div class="wrapper">
+        <div class="kontakttekst">
+        <h2>HAR DU SPØRGSMÅL?</h2>
+        <h3>SÅ SKRIV TIL OS</h3>
+            <p>har du et projekt eller ide i tankerne? så er vi klar til at få dine ideer og visioner ud i virkeligheden.
+                skriv til os her eller på vores mail, og så aftaler vi et møde og snakker om projektets muligheder.
+            </p>
+        </div>
+        <div class="kontaktformular">
+            <form>
+                <p>Navn:</p><br>
+                <input type="text" name="Navn" value=""/>
+                <br>
+                <p>Email:</p><br>
+                <input type="text" name="lastname" value="">
+                <br>
+                <p>Besked:</p><br>
+                <textarea name="text"></textarea>
+                <br><br>
+                <div class="kontaktknap">
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<section class="kontaktmap">
+    <div class="wrapper">
+        <div class="kontaktinfo">
+            <h3>KONTAKT INFO</h3>
+            <p>TLF: +45 11 22 33 44</p>
+            <p>Email: hej@mail.dk</p>
+        </div>
+        <div class="maptekst">
+            <i data-feather="map-pin"></i>
+            <p>FIND OS</p>
+        </div>
+        <div id="map"></div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    feather.replace();
+</script>
+<script src="js/navbar.js"></script>
+<script>
+    $(document).ready(function() {
+        var mapdiv = document.getElementById('map');
+        var map = new google.maps.Map(mapdiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+        });
+
+    });</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSWV-NvLSTdEkJiymT8_6efN-csDohN4&callback=initMap" async defer>
+</script>
+</body>
+</html>

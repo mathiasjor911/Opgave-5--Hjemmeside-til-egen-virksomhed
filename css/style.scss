@@ -3,6 +3,19 @@
 body{
     background: $off-white;
 }
+
+h1,h2,h3 {
+  font-family: $inter-font;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+
+p {
+  font-family: $roboto-font;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
 a{
     text-decoration: none;
     color: $off-white;
@@ -12,6 +25,7 @@ a{
     padding: 1rem 2rem;
     margin: 0 auto;
 }
+
 .highlight{
     color: $orange;
 }
@@ -147,9 +161,8 @@ hr{
 }
 
 .intro-section, .subheader{
-    background: linear-gradient(to bottom, rgba($navy, 0.9), rgba($navy, 0.9)), url('../img/bg-pattern.jpg');
-    background-position: center center;
-    background-size: cover;
+  background: linear-gradient(to bottom, rgba($navy, 0.9), rgba($navy, 0.9)), url('../img/bg-pattern.jpg') center center;
+  background-size: cover;
     color: $off-white;
 }
 
@@ -246,21 +259,10 @@ hr{
 }
 
 
-h1,h2,h3 {
-    font-family: $inter-font;
-    margin-bottom: 0;
-    font-weight: 900;
-}
-
-p {
-    font-family: $roboto-font;
-    font-weight: 300;
-    line-height: 1.6;
-}
 
 
-/* Ydelser */
-.webudvikling {
+/* Ydelser - Stephanie */
+.webudvikling, .markedsføring, .hosting {
     .wrapper {
         .segment {
             p {
@@ -268,14 +270,28 @@ p {
             }
         }
     }
+
+  .image-webudvikling {
+    background: url("../img/udvikling.jpg") center center;
+    background-size: cover;
+    height: 340px;
+    margin-bottom: 25px;
+  }
+
+  .image-analyse {
+    background: url("../img/analyse.jpg")  center center;
+    background-size: cover;
+    height: 340px;
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .webudvikling, .markedsføring {
+    .webudvikling, .markedsføring, .hosting {
         .wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 25px;
+            grid-gap: 50px;
 
             .segment {
                 grid-column: (1);
@@ -289,6 +305,20 @@ p {
                 grid-column: (3);
             }
         }
+
+      .image-webudvikling {
+        background: url("../img/udvikling.jpg") center center;
+        background-size: cover;
+        height: 400px;
+        margin-bottom: 25px;
+      }
+
+      .image-analyse {
+        background: url("../img/analyse.jpg")  center -350px;
+        background-size: cover;
+        height: 400px;
+        margin-bottom: 25px;
+      }
     }
 }
 
@@ -394,13 +424,11 @@ p {
 }
 
 /* TEAM-side */
+/* af sara */
 
 .team {
     margin-bottom: 0.17em;
   .wrapper {
-      @media screen and (min-width: 992px) {
-      }
-
     h1 {
         font-family: $inter-font, $roboto-font;
         color: $navy;
@@ -419,44 +447,47 @@ p {
         flex-direction: column;
         align-items: center;
 
+      h1 {
+        font-family: $roboto-font, $inter-font;
+        color: $white;
+        margin: 0;
+        font-size: 34px;
+        text-align: left;
+      }
+
+
+      p {
+        font-family: $roboto-font, $inter-font;
+        color: $white;
+        margin-top: 0;
+        font-size: 19px;
+      }
       .profil {
-        margin-bottom: 20px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29),
+        url("../img/Group 6.jpg");
+        background-size: cover;
+        margin: 10px 10px 10px 10px;
+        position: relative;
+        max-width: 400px;
+        min-width: 100px;
+        width: 100%;
+        max-height: 390px;
+        min-height: 344px;
+        height: 100%;
 
-        .textprofil {
+        h1 {
           position: absolute;
-          padding-left: 15px;
-          padding-top: 258px;
-          z-index: 1;
-
-          h1 {
-            font-family: $roboto-font, $inter-font;
-            color: $white;
-            margin: 0;
-            font-size: 34px;
-            text-align: left;
-          }
-
-
-          p {
-            font-family: $roboto-font, $inter-font;
-            color: $white;
-            margin-top: 0;
-            font-size: 19px;
-          }
+          padding-bottom: 10px;
+          bottom: 40px;
+          left: 20px;
+          margin: 0;
         }
-
-        .gradientimg {
-          width: 328px;
-          height: 334px;
+        p {
           position: absolute;
-          background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(188, 188, 191, 0.31), #1F1F29);
-          /*
-          background-image: linear-gradient(to bottom, transparent 50%, black 100%);
-          */
-        }
-
-        img {
-          width: 328px;
+          bottom: 20px;
+          left: 20px;
+          color: white;
+          margin: 0;
         }
       }
     }
@@ -481,17 +512,285 @@ p {
       font-family: $roboto-font;
       font-size: 24px;
     }
+    .tekstpraktik {
+      display: grid;
+      grid-template-columns:1fr;
+      padding-top: 40px;
 
-    p {
-      font-family: $roboto-font;
-      font-size: 18px;
-      margin: 26px 0 0 0;
+      p {
+        font-family: $roboto-font;
+        font-size: 18px;
+        margin: 26px 0 0 0;
 
-      .highlight {
-        color: $orange;
+        .highlight {
+          color: $orange;
 
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .team {
+    .wrapper {
+      h1 {
+        text-align: left;
+      }
+      .teamprofiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        .profil {
+          width: 40%;
+          height: 300px;
+          margin: 10px 10px 20px 10px;
+        }
+      }
+    }
+  }
+
+  .praktik {
+    .ompraktik {
+      .tekstpraktik {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35px;
+        padding-top: 40px;
+
+        p:nth-of-type(1) {
+          grid-column: (1);
+        }
+
+        &:nth-of-type(2) {
+          grid-column: (2);
+        }
+
+        &:nth-of-type(3) {
+          grid-column: (3);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .team {
+    .wrapper {
+      h1 {
+        text-align: left;
+      }
+      .teamprofiles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        .profil {
+          width: 312px;
+          height: 300px;
+          margin: 10px 10px 20px 10px;
+        }
       }
     }
   }
 }
 
+/* kontakt-side */
+/* af sara */
+.kontakt {
+  margin-bottom: 2.17em;
+  .wrapper {
+
+    .kontakttekst {
+      p {
+        padding-bottom: 15px;
+      }
+      h2 {
+         font-size: 32px;
+         padding-right: 50px;
+       }
+      h3 {
+        font-size: 24px;
+      }
+    }
+    .kontaktformular {
+      form {
+        p {
+          font-family: $roboto-font;
+          margin: 0 0 -11px 0;
+        }
+        input {
+          border: 3px solid $navy;
+          width: 100%;
+          height: 35px;
+          margin-bottom: 20px;
+          font-family: $roboto-font;
+          font-weight: 300;
+          padding-left: 10px;
+          padding-right: 10px;
+
+        }
+        textarea {
+          width: 100%;
+          height: 85px;
+          border: 3px solid $navy;
+          font-family: $roboto-font;
+          font-weight: 300;
+          padding: 10px;
+        }
+        .kontaktknap {
+          padding-top: 38px;
+          button {
+            border: 3px solid $orange;
+            background: $white;
+            border-radius: 50px;
+            height: 69px;
+            font-family: $inter-font;
+            color: $orange;
+            font-size: 18px;
+            font-weight: 900;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.kontaktmap {
+  background: $white;
+  .wrapper {
+    .kontaktinfo{
+      h3 {
+        font-family: $roboto-font;
+        font-size: 24px;
+      }
+      p {
+
+      }
+    }
+    .maptekst {
+      text-align: center;
+      padding-top: 20px;
+      svg {
+        color: $orange;
+        width: 40px;
+        height: auto;
+      }
+      p {
+        font-family: $inter-font;
+        font-weight: 900;
+        font-size: 22px;
+        margin-top: 5px;
+      }
+      #map {
+        display: block;
+        width: 300px;
+        height: 400px;
+        background-color: grey;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .kontakt {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+
+      .kontakttekst {
+        width: 50%;
+        p {
+          padding-right: 100px;
+          padding-top: 15px;
+
+        }
+      }
+      .kontaktformular {
+        width: 50%;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+/* Footer Stephanie */
+.footer {
+  background: $navy;
+  color: $off-white;
+  padding-top: 40px;
+
+  .wrapper {
+    .logo {
+      font-family: $inter-font;
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+
+    .footer-wrapper {
+      display: flex;
+      margin-bottom: 20px;
+
+      p {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    svg {
+      color: $off-white;
+    }
+  }
+
+    .some-footer {
+      background: darken($navy, 4);
+      display: flex;
+      justify-content: space-between;
+      max-width: 1400px;
+      padding: 1rem 2rem;
+
+      .copyright-box {
+        .copyright {
+          font-size: 12px;
+        }
+      }
+
+      .some-box {
+        svg {
+          width: 15px;
+          height: auto;
+          padding: 0 5px;
+          margin-top: 0.8em;
+          color: $off-white;
+        }
+      }
+    }
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      .footer-logo {
+        grid-column: 1/span 3;
+
+        .logo {
+          font-size: 28px;
+        }
+      }
+
+      .footer-info {
+        grid-column: (4);
+        margin-top: 25px;
+
+        .footer-wrapper {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,16 @@
 body {
   background: #f5f5f5; }
 
+h1, h2, h3 {
+  font-family: "Inter UI", sans-serif;
+  margin-bottom: 0;
+  font-weight: 900; }
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.6; }
+
 a {
   text-decoration: none;
   color: #f5f5f5; }
@@ -109,8 +119,7 @@ hr {
           border-color: #f5f5f5; }
 
 .intro-section, .subheader {
-  background: linear-gradient(to bottom, rgba(31, 31, 41, 0.9), rgba(31, 31, 41, 0.9)), url("../img/bg-pattern.jpg");
-  background-position: center center;
+  background: linear-gradient(to bottom, rgba(31, 31, 41, 0.9), rgba(31, 31, 41, 0.9)), url("../img/bg-pattern.jpg") center center;
   background-size: cover;
   color: #f5f5f5; }
 
@@ -187,31 +196,49 @@ h1, h2, h3 {
   margin-bottom: 0;
   font-weight: 900; }
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 1.6; }
-
-/* Ydelser */
-.webudvikling .wrapper .segment p {
+/* Ydelser - Stephanie */
+.webudvikling .wrapper .segment p, .markedsføring .wrapper .segment p, .hosting .wrapper .segment p {
   margin-bottom: 40px; }
 
+
+.webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
+  background: url("../img/udvikling.jpg") center center;
+  background-size: cover;
+  height: 340px;
+  margin-bottom: 25px; }
+
+.webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
+  background: url("../img/analyse.jpg") center center;
+  background-size: cover;
+  height: 340px;
+  margin-bottom: 25px; }
+
 @media screen and (min-width: 992px) {
-  .webudvikling .wrapper, .markedsføring .wrapper {
+  .webudvikling .wrapper, .markedsføring .wrapper, .hosting .wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px; }
-    .webudvikling .wrapper .segment, .markedsføring .wrapper .segment {
+    grid-gap: 50px; }
+    .webudvikling .wrapper .segment, .markedsføring .wrapper .segment, .hosting .wrapper .segment {
       -ms-grid-column: 1;
       grid-column: 1; }
-    .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2) {
+    .webudvikling .wrapper .segment:nth-of-type(2), .markedsføring .wrapper .segment:nth-of-type(2), .hosting .wrapper .segment:nth-of-type(2) {
       -ms-grid-column: 2;
       grid-column: 2; }
-    .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3) {
+    .webudvikling .wrapper .segment:nth-of-type(3), .markedsføring .wrapper .segment:nth-of-type(3), .hosting .wrapper .segment:nth-of-type(3) {
       -ms-grid-column: 3;
-      grid-column: 3; } }
+      grid-column: 3; }
+  .webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
+    background: url("../img/udvikling.jpg") center center;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 25px; }
+  .webudvikling .image-analyse, .markedsføring .image-analyse, .hosting .image-analyse {
+    background: url("../img/analyse.jpg") center -350px;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 25px; } }
 
 /* Abdullah CSS */
 .sectionomos .wrapper {
@@ -339,5 +366,56 @@ p {
     margin: 26px 0 0 0; }
     .praktik .ompraktik p .highlight {
       color: #ff7f50; }
+/* Footer Stephanie */
+.footer {
+  background: #1f1f29;
+  color: #f5f5f5;
+  padding-top: 40px; }
+  .footer .wrapper .logo {
+    font-family: "Inter UI", sans-serif;
+    font-weight: 900;
+    font-size: 24px; }
+  .footer .wrapper p {
+    margin-bottom: 40px; }
+  .footer .wrapper .footer-wrapper {
+    display: flex;
+    margin-bottom: 20px; }
+    .footer .wrapper .footer-wrapper p {
+      margin: 0 0 0 20px; }
+  .footer .wrapper svg {
+    color: #f5f5f5; }
+  .footer .some-footer {
+    background: #16161d;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    padding: 1rem 2rem; }
+    .footer .some-footer .copyright-box .copyright {
+      font-size: 12px; }
+    .footer .some-footer .some-box svg {
+      width: 15px;
+      height: auto;
+      padding: 0 5px;
+      margin-top: 0.8em;
+      color: #f5f5f5; }
+
+@media screen and (min-width: 992px) {
+  .footer .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr); }
+    .footer .wrapper .footer-logo {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+      grid-column: 1/span 3; }
+      .footer .wrapper .footer-logo .logo {
+        font-size: 28px; }
+    .footer .wrapper .footer-info {
+      -ms-grid-column: 4;
+      grid-column: 4;
+      margin-top: 25px; }
+      .footer .wrapper .footer-info .footer-wrapper {
+        justify-content: flex-end; } }
 
 /*# sourceMappingURL=style.css.map */
