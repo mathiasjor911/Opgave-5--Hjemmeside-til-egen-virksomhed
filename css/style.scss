@@ -38,6 +38,7 @@ svg{
 hr{
     width: 80px;
     border: 2px solid $orange;
+    background: $orange;
 }
 .btn{
 border: 3px solid $orange;
@@ -327,46 +328,72 @@ background: $orange;
 
 /* Ydelser - Stephanie */
 .webudvikling, .markedsføring, .hosting {
-    .wrapper {
-        .segment {
-            p {
-                margin-bottom: 40px;
-            }
-        }
+  .wrapper {
+    hr {
+      margin: 0;
     }
+    .segment {
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
 
   .image-webudvikling {
     background: url("../img/udvikling.jpg") center center;
     background-size: cover;
     height: 340px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   .image-analyse {
     background: url("../img/analyse.jpg")  center center;
     background-size: cover;
     height: 340px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+.webudvikling {
+  .wrapper {
+    padding-top: 3rem;
   }
 }
 
 @media screen and (min-width: 992px) {
     .webudvikling, .markedsføring, .hosting {
         .wrapper {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 50px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 50px;
+          margin: 50px 0;
+
+          hr {
+            margin-bottom: 10px;
+          }
 
             .segment {
                 grid-column: (1);
+
+              p {
+                margin-bottom: 0;
+              }
             }
 
             .segment:nth-of-type(2) {
                 grid-column: (2);
+
+              p {
+                margin-bottom: 0;
+              }
             }
 
             .segment:nth-of-type(3) {
                 grid-column: (3);
+
+              p {
+                margin-bottom: 0;
+              }
             }
         }
 
@@ -374,18 +401,23 @@ background: $orange;
         background: url("../img/udvikling.jpg") center center;
         background-size: cover;
         height: 400px;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
       }
 
       .image-analyse {
         background: url("../img/analyse.jpg")  center -350px;
         background-size: cover;
         height: 400px;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
       }
     }
-}
 
+  .webudvikling {
+    .wrapper {
+      padding-top: 1rem;
+    }
+  }
+}
 
 
 
@@ -667,6 +699,7 @@ background: $orange;
   .wrapper {
 
     .kontakttekst {
+      padding-top: 20px;
       p {
         padding-bottom: 15px;
       }
@@ -678,7 +711,32 @@ background: $orange;
         font-size: 24px;
       }
     }
+    .kontaktinfo {
+      h3 {
+        font-family: $roboto-font;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      .kontaktinfo-item {
+        display: flex;
+        margin-top: -10px;
+
+        svg {
+          padding-top: 16px;
+        }
+
+        p {
+          padding-left: 12px;
+        }
+      }
+    }
     .kontaktformular {
+      margin-top:35px;
       form {
         p {
           font-family: $roboto-font;
@@ -686,7 +744,7 @@ background: $orange;
         }
         input {
           border: 3px solid $navy;
-          width: 100%;
+          width: 95%;
           height: 35px;
           margin-bottom: 20px;
           font-family: $roboto-font;
@@ -696,7 +754,7 @@ background: $orange;
 
         }
         textarea {
-          width: 100%;
+          width: 95%;
           height: 85px;
           border: 3px solid $navy;
           font-family: $roboto-font;
@@ -705,7 +763,7 @@ background: $orange;
         }
         .kontaktknap {
           padding-top: 38px;
-          button {
+          .btn {
             border: 3px solid $orange;
             background: $white;
             border-radius: 50px;
@@ -724,15 +782,6 @@ background: $orange;
 .kontaktmap {
   background: $white;
   .wrapper {
-    .kontaktinfo{
-      h3 {
-        font-family: $roboto-font;
-        font-size: 24px;
-      }
-      p {
-
-      }
-    }
     .maptekst {
       text-align: center;
       padding-top: 20px;
@@ -746,12 +795,6 @@ background: $orange;
         font-weight: 900;
         font-size: 22px;
         margin-top: 5px;
-      }
-      #map {
-        display: block;
-        width: 300px;
-        height: 400px;
-        background-color: grey;
       }
     }
   }
@@ -768,6 +811,20 @@ background: $orange;
           padding-right: 100px;
           padding-top: 15px;
 
+        }
+      }
+      .kontaktinfo {
+        .kontaktinfo-item {
+          display: flex;
+          margin-top: -25px;
+
+          svg {
+            padding-top: 32px;
+          }
+
+          p {
+            padding-left: 12px;
+          }
         }
       }
       .kontaktformular {
