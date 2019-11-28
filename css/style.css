@@ -572,7 +572,7 @@ hr {
     background: #16161d;
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 100%;
     padding: 1rem 2rem; }
     .footer .some-footer .copyright-box .copyright {
       font-size: 12px; }
