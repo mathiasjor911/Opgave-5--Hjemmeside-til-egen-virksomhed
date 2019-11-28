@@ -236,20 +236,32 @@ hr{
     background: $navy;
     padding: 4em 0;
     color: $off-white;
+    position: relative;
+    z-index: -1;
 
     .wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 50px;
+        padding: 5em 0;
     }
     h2{
         text-transform: uppercase;
     }
     .ydelses-billede{
         background: linear-gradient(to bottom, rgba($navy, 0.2), rgba($navy, 0.8));
+        position: relative;
+
+        h3{
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          text-transform: uppercase;
+        }
     }
     img{
         max-width: 100%;
+        margin-top: 1.5em;
         height: auto;
         z-index:-1;
         display:block;
@@ -258,6 +270,20 @@ hr{
     }
 }
 
+/* Møde section */
+.mode-section{
+  background: $white;
+
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 5em 0;
+  }
+
+  img{
+    max-width: 500px;
+  }
+}
 
 
 
