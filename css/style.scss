@@ -366,7 +366,7 @@ background: $orange;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-column-gap: 50px;
-          margin: 50px 0;
+          margin: 50px auto;
 
           hr {
             margin-bottom: 10px;
