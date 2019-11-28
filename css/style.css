@@ -30,6 +30,10 @@ svg {
   color: #ff7f50;
   stroke-width: 1; }
 
+hr {
+  width: 80px;
+  border: 2px solid #ff7f50; }
+
 /* Navbar / Intro Section */
 .navbar {
   font-family: "Inter UI", sans-serif;
@@ -38,6 +42,9 @@ svg {
   justify-content: space-between;
   align-items: center;
   padding: 1em 0; }
+  @media screen and (max-width: 992px) {
+    .navbar {
+      flex-wrap: wrap; } }
   .navbar .logo {
     font-family: "Inter UI", sans-serif;
     font-weight: 900;
@@ -45,34 +52,50 @@ svg {
   .navbar .nav-menu {
     cursor: pointer;
     display: none; }
+    .navbar .nav-menu svg {
+      color: #f5f5f5;
+      width: 28px;
+      height: auto; }
     @media screen and (max-width: 992px) {
       .navbar .nav-menu {
         display: flex; } }
   .navbar .nav-links {
     list-style: none;
-    display: flex; }
+    display: flex;
+    text-align: right; }
     @media screen and (max-width: 992px) {
       .navbar .nav-links {
-        display: none; } }
+        display: none;
+        width: 100%; } }
     .navbar .nav-links li {
       padding: 0;
       margin: 0 1em; }
+      @media screen and (max-width: 992px) {
+        .navbar .nav-links li {
+          margin: 0.7em 0.5em; } }
     .navbar .nav-links .nav-link {
       color: #f5f5f5;
       font-family: "Roboto", sans-serif;
       font-weight: 300;
-      font-size: 13px;
+      font-size: 15px;
       text-transform: uppercase;
       opacity: 0.7;
       transition: 200ms ease-in-out; }
       .navbar .nav-links .nav-link:hover {
         opacity: 1; }
+      .navbar .nav-links .nav-link svg {
+        color: white;
+        width: 13px;
+        height: 13px; }
     .navbar .nav-links .active {
       font-weight: 400;
       opacity: 1; }
   .navbar .dropdown-menu {
     display: none;
     position: absolute; }
+    @media screen and (max-width: 992px) {
+      .navbar .dropdown-menu {
+        position: relative; } }
     .navbar .dropdown-menu .dropdown-content {
       display: flex;
       flex-direction: column;
@@ -80,10 +103,17 @@ svg {
       .navbar .dropdown-menu .dropdown-content .dropdown-link {
         color: rgba(245, 245, 245, 0.7);
         font-size: 13px;
+        text-transform: uppercase;
         display: block;
         border-left: 1px solid rgba(245, 245, 245, 0.5);
         padding: 0.6em 1em;
         transition: 200ms ease-in-out; }
+        @media screen and (max-width: 992px) {
+          .navbar .dropdown-menu .dropdown-content .dropdown-link {
+            padding: 0.6em 1em;
+            border-left: none;
+            border-right: 1px solid rgba(245, 245, 245, 0.5);
+            font-size: 15px; } }
         .navbar .dropdown-menu .dropdown-content .dropdown-link:hover {
           color: #f5f5f5;
           border-color: #f5f5f5; }
@@ -101,6 +131,13 @@ svg {
   .intro-content p {
     line-height: 1.4;
     font-size: 18px; }
+
+.subheader .intro-content {
+  text-align: center;
+  max-width: 100%; }
+  .subheader .intro-content h1 {
+    font-size: 56px;
+    text-transform: uppercase; }
 
 /* Feature section */
 .front-features {
@@ -131,9 +168,38 @@ svg {
     width: 70px;
     height: auto; }
 
+/* Ydelser - section */
+.ydelser-section {
+  background: #1f1f29;
+  padding: 4em 0;
+  color: #f5f5f5; }
+  .ydelser-section .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 50px;
+         column-gap: 50px; }
+  .ydelser-section h2 {
+    text-transform: uppercase; }
+  .ydelser-section .ydelses-billede {
+    background: linear-gradient(to bottom, rgba(31, 31, 41, 0.2), rgba(31, 31, 41, 0.8)); }
+  .ydelser-section img {
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+    display: block;
+    position: relative; }
+
+h1, h2, h3 {
+  font-family: "Inter UI", sans-serif;
+  margin-bottom: 0;
+  font-weight: 900; }
+
 /* Ydelser - Stephanie */
 .webudvikling .wrapper .segment p, .markedsføring .wrapper .segment p, .hosting .wrapper .segment p {
   margin-bottom: 40px; }
+
 
 .webudvikling .image-webudvikling, .markedsføring .image-webudvikling, .hosting .image-webudvikling {
   background: url("../img/udvikling.jpg") center center;
@@ -300,7 +366,6 @@ svg {
     margin: 26px 0 0 0; }
     .praktik .ompraktik p .highlight {
       color: #ff7f50; }
-
 /* Footer Stephanie */
 .footer {
   background: #1f1f29;
