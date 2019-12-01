@@ -5,7 +5,7 @@
 
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
-    <title>Opgave 5</title>
+    <title>Teamet - massweb.</title>
 
     <!-- Meta tags -->
     <meta charset="UTF-8">
@@ -35,13 +35,11 @@
 
 </head>
 
-<!-- i <body> har man alt indhold på siden
-denne side skal sættes op i grid med 4 rows-->
 <body>
 <section class="subheader">
     <div class="wrapper">
         <div class="navbar">
-            <a href="" class="logo">
+            <a href="/" class="logo">
                 massweb<span class="highlight">.</span>
             </a>
             <div class="nav-menu">
@@ -53,18 +51,18 @@ denne side skal sættes op i grid med 4 rows-->
                 </li>
                 <li>
                     <div class="dropdown-wrapper">
-                        <span class="nav-link active dropdown" href="ydelser.html">Ydelser</span>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-link">Webudvikling</a>
-                                <a href="#" class="dropdown-link">Markedsføring</a>
-                                <a href="#" class="dropdown-link">Webhosting</a>
-                            </div>
-                        </div>
+                    <span class="nav-link dropdown" href="ydelser.html">Ydelser <i data-feather="chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        <a href="ydelser.html#webudvikling" class="dropdown-link">Webudvikling</a>
+                        <a href="ydelser.html#markedsføring" class="dropdown-link">Markedsføring</a>
+                        <a href="ydelser.html#hosting" class="dropdown-link">Webhosting</a>
                     </div>
+                    </div>
+                </div>
                 </li>
                 <li>
-                    <a class="nav-link" href="teamet.html">Teamet</a>
+                    <a class="nav-link active" href="teamet.html">Teamet</a>
                 </li>
                 <li>
                     <a class="nav-link" href="om-os.html">Om os</a>
@@ -83,35 +81,38 @@ denne side skal sættes op i grid med 4 rows-->
 
 <section class="team">
     <div class="wrapper">
-        <h1>MØD TEAMET HOS <span class="highlight">MASSWEB</span></h1>
+        <h2>MØD TEAMET HOS <span class="highlight">massweb</span></h2>
         <div class="teamprofiles">
-            <div class="profil box">
-                <h1>ABDULLAH</h1>
-                <p>UDVIKLER</p>
+            <div class="gradient">
+                <img src="/img/abdullah.jpg">
+                <p class="navn">Abdullah</p>
+                <p class="title">Udvikler</p>
             </div>
-
-            <div class="profil box">
-                <h1>MATHIAS</h1>
-                <p>UDVIKLER</p>
+            <div class="gradient">
+                <img src="/img/mathias.jpg">
+                <p class="navn">Mathias</p>
+                <p class="title">Udvilker</p>
             </div>
-
-            <div class="profil box">
-                <h1>SARA</h1>
-                <p>GRAFISK DESIGNER</p>
+            <div class="gradient">
+                <img src="/img/sara.jpg">
+                <p class="navn">Sara</p>
+                <p class="title">Grafisk designer</p>
             </div>
-
-            <div class="profil box">
-                <h1>STEPHANIE</h1>
-                <p>MARKEDSFØRING</p>
+            <div class="gradient">
+                <img src="/img/abdullah.jpg">
+                <p class="navn">Stephanie</p>
+                <p class="title">Markedsføring</p>
             </div>
         </div>
     </div>
-
 </section>
 <section class="praktik">
     <div class="wrapper">
-        <div class="ompraktik">
+            <div>
+            <hr>
             <h2> EN VIRKSOMHED I <span class="highlight">UDVIKLING</span></h2>
+            </div>
+            <div>
             <h3>VI SØGER PRAKTIKANT</h3>
             <div class="tekstpraktik">
                 <p>Kunne du have lyst til at vise os, hvad du dur til? vi hos MASSWEB,
@@ -125,55 +126,58 @@ denne side skal sættes op i grid med 4 rows-->
                     hvor man til enhver tid kan benytte sig af vores køkken for at få en snack, eller spille på vores billard,
                     for at cleare hjernen.
                 </p>
-                <P>Er du i tvivl om noget? så vil der altid være en, som står på spring for at hjælpe.
+                <p>Er du i tvivl om noget? så vil der altid være en, som står på spring for at hjælpe.
                     Hos MASSWEB handler det nemlig om at komme samlet i mål, hvilket også gælder for vores praktikanter. vi sørger
                     for at du får lært alt hvad der er værd at vide, så du er bedre rustet når du er færdig med din uddannelse.
                     Kunne det være noget for dig? så tvivl ikke!
                     <br><br><br>
                     Ansøg <span class="highlight">her</span>
-                </P>
+            </p>
             </div>
         </div>
     </div>
 </section>
+
 <section class="footer">
-    <div class="wrapper">
-        <div class="footer-logo">
-            <div class="logo">
-                massweb<span class="highlight">.</span>
+        <div class="wrapper">
+            <div class="footer-logo">
+                <div class="logo">
+                    massweb<span class="highlight">.</span>
+                </div>
+                <p>massweb er et nystartet webbureau som kan jeg hjælpe din virksomhed. Om det enten er med udvikling af ny
+                    hjemmeside, udarbejdelse af grafisk indhold eller markedsføring af din virksomhed, så er vi klædt på til
+                    opgaven.</p>
             </div>
-            <p>massweb er et nystartet webbureau som kan jeg hjælpe din virksomhed. Om det enten er med udvikling af ny
-                hjemmeside, udarbejdelse af grafisk indhold eller markedsføring af din virksomhed, så er vi klædt på til
-                opgaven.</p>
+    
+            <div class="footer-info">
+                <div class="footer-wrapper">
+                    <i data-feather="phone"></i>
+                    <p>+45 11 22 33 44</p>
+                </div>
+    
+                <div class="footer-wrapper">
+                    <i data-feather="mail"></i>
+                    <p>mass@mail.dk</p>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-info">
-            <div class="footer-wrapper">
-                <i data-feather="phone"></i>
-                <p>+45 11 22 33 44</p>
+    
+        <div class="some-footer">
+            <div class="wrapper">
+            <div class="copyright-box">
+                <p class="copyright">© Copyright 2019</p>
             </div>
-
-            <div class="footer-wrapper">
-                <i data-feather="mail"></i>
-                <p>mass@mail.dk</p>
+            <div class="some-box">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i data-feather="instagram"></i>
+                </a>
             </div>
         </div>
     </div>
-
-    <div class="some-footer">
-        <div class="copyright-box">
-            <p class="copyright">© Copyright 2019</p>
-        </div>
-        <div class="some-box">
-            <a href="https://www.facebook.com" target="_blank">
-                <i data-feather="facebook"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i data-feather="instagram"></i>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
